@@ -18,14 +18,11 @@
      name:'Navbar',
      data(){
          return{
-
          }
      }
-
  }
 </script>
-
-<style>
+<style scoped>
   nav{
       text-align: center;
   }
