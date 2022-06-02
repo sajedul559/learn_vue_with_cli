@@ -3,30 +3,39 @@
 
       <h2>{{ title}}</h2>
       <Navbar></Navbar>
-      <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Post</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-
-            </ul>
-        </nav>
+      <AllFriends :friends="friends"></AllFriends>
+      <OnlineFriends :friends="friends"></OnlineFriends>
+     
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/Navbar.vue';
+import AllFriends from './components/AllFriends.vue';
+import OnlineFriends from './components/OnlineFriends.vue';
+
+
+
 
 export default {
   name: 'App',
   data(){
     return {
-      title:'Huray our vue apps are running'
+      title:'Huray our vue apps are running',
+       friends:[
+                 {name:'A',online:true},
+                 {name:'B',online:true},
+                 {name:'C',online:false},
+                 {name:'D',online:false},
+                 {name:'E',online:false}
+
+             ]
     }
   },
   components:{
-    Navbar
+    Navbar,
+    AllFriends,
+    OnlineFriends
 }
   
 }
